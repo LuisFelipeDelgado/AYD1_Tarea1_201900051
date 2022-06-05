@@ -20,5 +20,14 @@ def resta():
 
     return str(result)
 
+@app.route('/multiplicacion', methods = ['POST'])
+def multiplicacion():
+    numero1 = int(request.json['numero1'])
+    numero2 = int(request.json['numero2'])
+
+    result = numero1*numero2
+
+    return str(result)
+
 if (__name__ == '__main__'):
     app.run(port = 3000, debug = True)
